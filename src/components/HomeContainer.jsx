@@ -27,13 +27,11 @@ const HomeContainer = () => {
         </div>
       <div className='py-2  flex-1 flex items-center relative '>
         <img src={HeroBg} className='h-420 ml-auto w-full lg:w-auto lg:h-650'alt='hero-bg' />
-        <div className='w-full h-full absolute  top-0 left-0 flex  items-center justify-center px-32 py-4 '></div>
-        <div className='w-40 h-40 p-6 ml-16 mb-8 bg-cardOverlay backdrop-blur-md flex absolute left-40 '>
-        <img src={d4} alt='d4' className='w-40  -mt-20 mb-14' />
-          <p className='text-md  font-semibold text-textColor flex absolute bottom-12 left-9'> MockTails</p>
-          <p className='text-sm text-lighttextGray font-semi-bold flex absolute bottom-6 flex-nowrap '> Hawaiian Mocktail</p>
-          <p className='absolute bottom-0 text-xs ml-7' ><span className='text-red-600'>$</span>5.25</p>
+        <div className='w-full h-full absolute  top-0 left-0 flex  items-center justify-center px-32 py-4 '>
+        <div className='w-190 p-2 bg-cardOverlay backdrop-blur-md'>
+          <img src='' />
   
+        </div>
         </div>
  
         
