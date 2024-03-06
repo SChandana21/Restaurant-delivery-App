@@ -1,9 +1,9 @@
 import React from 'react'
 import delivery from '../img/delivery.png'
 import HeroBg from '../img/heroBg.png'
+import image from '../components/img/image.png'
 import d4 from '../img/d4.png'
-
-
+import food2 from '../components/img/food2.jpg'
 
 
 const HomeContainer = () => {
@@ -19,14 +19,14 @@ const HomeContainer = () => {
         </div>
         </div>
 
-        <p className='text-[2.5rem] font-bold tracking-wide text-headingColor lg:text-[4.5rem] '>The Tastiest Food <span className='text-orange-700'> at your Doorstep. </span> </p>
+        <p className='text-[2.5rem] font-bold tracking-wide text-headingColor lg:text-[4.5rem] '>The Tastiest Food <span className='text-imagecolor'> at your Doorstep. </span> </p>
 
         <p className='text-base text-textColor text-center md:text-left md:w-[80%] '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta architecto, quo accusantium dolores sapiente non autem ab laudantium? Praesentium ut laboriosam aliquam, nulla velit eum esse laudantium adipisci incidunt a!</p>
 
         <button type='button' className='bg-gradient-to-br from-orange-400 to-orange-500 w-full px-4 py-2 rounded-lg hover:shadow-lg transition-all ease-in-out duration-100 md:w-auto'>Order now</button>
         </div>
       <div className='py-2  flex-1 flex items-center relative '>
-        <img src={HeroBg} className='h-420 ml-auto w-full lg:w-auto lg:h-650'alt='hero-bg' />
+        <img src={food2} className='h-420 ml-auto w-full lg:w-auto lg:h-650'alt='hero-bg' />
         <div className='w-full h-full absolute  top-0 left-0 flex  items-center justify-center px-32 py-4 '>
         <div className='w-190 p-2 bg-cardOverlay backdrop-blur-md'>
           <img src='' />

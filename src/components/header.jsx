@@ -101,7 +101,7 @@ const Header = () => {
       </div>
         </div>
 
-        
+
       <Link to={"/"} className='flex items-center gap-2'>
           <img src={Logo} className='w-8 object-cover' alt='logo'></img>
           <p className='text-HeadingColor text-xl font-bold'>City</p>
@@ -119,14 +119,14 @@ const Header = () => {
                 </Link>
             )}
             <ul  className='flex flex-col '>
-        <li className='text-base text-textColor hover:text-headingColor duration-100  transition-all ease-in-out hover:bg-slate-100 px-4 py-2
-         cursor-pointer'>Home</li>
-        <li className='text-base text-textColor hover:text-headingColor duration-100  transition-all ease-in-out hover:bg-slate-100 px-4 py-2
-        cursor-pointer'>Menu</li>
-        <li className='text-base text-textColor hover:text-headingColor duration-100  transition-all ease-in-out hover:bg-slate-100 px-4 py-2
-        cursor-pointer'>About Us</li>
-        <li className='text-base text-textColor hover:text-headingColor duration-100  transition-all ease-in-out hover:bg-slate-100 px-4 py-2
-        cursor-pointer'>Service</li>
+        <li className='text-base text-textColor hover:text-headingColor duration-100  transition-all ease-in-out hover:bg-slate-100 px-4 py-2 
+         cursor-pointer' onClick={() => setisMenu(false)}>Home</li>
+        <li className='text-base text-textColor hover:text-headingColor duration-100  transition-all ease-in-out hover:bg-slate-100 px-4 py-2 
+        cursor-pointer' onClick={() => setisMenu(false)}>Menu</li>
+        <li className='text-base text-textColor hover:text-headingColor duration-100  transition-all ease-in-out hover:bg-slate-100 px-4 py-2 
+        cursor-pointer' onClick={() => setisMenu(false)}>About Us</li>
+        <li className='text-base text-textColor hover:text-headingColor duration-100  transition-all ease-in-out hover:bg-slate-100 px-4 py-2 
+        cursor-pointer' onClick={() => setisMenu(false)}>Service</li>
       </ul>
 
             

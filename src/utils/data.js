@@ -24,4 +24,41 @@ export const heropData = [
        price: '3.25',
         imageSrc : r4
       },
-]
+];
+
+export const categories = [{
+  id: 1,
+  name: "Chicken",
+  urlParamName: "chicken",
+},
+{
+  id: 2,
+  name: "Curry",
+  urlParamName: "curry",
+},
+{
+  id: 3,
+  name: "Rice",
+  urlParamName: "rice"
+},
+{
+  id: 4,
+  name: "Fish",
+  urlParamName:"fish",
+},
+{
+  id: 5,
+  name: "Ice creams",
+  urlParamName: "icecreams"
+},
+
+{ 
+  id: 6,
+  name: "Fruits",
+  urlParamName: "Fruits"
+},
+{
+  id: 7,
+  name: "Soft Drinks",
+  urlParamName: "drinks"
+},]
