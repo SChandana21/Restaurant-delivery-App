@@ -59,6 +59,7 @@ module.exports = {
         cartTotal: "#343739",
         imagecolor: '#e13713',
         card: "rgba(256,256,256,0.6)",
+        header: "rgba(245,243,243,255)",
       },
     },
   },
