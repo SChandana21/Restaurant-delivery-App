@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {IoFastFood} from 'react-icons/io5';
 import { categories } from '../utils/data';
 
 const MenuContainer = () => {
 
   const [filter, setfilter] = useState("chicken");
+
+  useEffect(() => {}, [filter])
 
 
   return <section className='w-full my-6' id='menu'>
@@ -14,7 +16,9 @@ const MenuContainer = () => {
 
         <div className='w-full flex items-center justify-start lg:justify-center gap-8 mt-6 overflow-x-scroll scrollbar-none py-6'>
           {categories && categories.map(category => (
-            <div key={category.id} className={`group ${filter === category.urlParamName ? 'bg-orange-500' : 'bg-card'} w-24 min-w-[94px] h-28 cursor-pointer rounded-lg drop-shadow-xl flex flex-col gap-3 items-center justify-center hover:bg-orange-600 duration-150 transition-all ease-in-out`}>
+            <div key={category.id} className={`group ${filter === category.urlParamName ? 'bg-orange-500' : 'bg-card'} w-24 min-w-[94px] h-28 cursor-pointer rounded-lg drop-shadow-xl flex flex-col gap-3 items-center justify-center hover:bg-orange-600 duration-150 transition-all ease-in-out`}
+            onClick={() => setfilter(category.urlParamName)}>
+
             <div className={`w-10 h-10 rounded-full ${filter === category.urlParamName ? 'bg-card': 'bg-orange-500'} group-hover:bg-white flex items-center justify-center shadow-lg`}>
               <IoFastFood className={`${filter === category.urlParamName ? "text-textColor" : "text-white"} group-hover:text-textColor `} />
             </div>
