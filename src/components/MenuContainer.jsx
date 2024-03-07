@@ -14,11 +14,11 @@ const MenuContainer = () => {
 
         <div className='w-full flex items-center justify-start lg:justify-center gap-8 mt-6 overflow-x-scroll scrollbar-none py-6'>
           {categories && categories.map(category => (
-            <div key={category.id} className='group bg-card w-24 min-w-[94px] h-28 cursor-pointer rounded-lg drop-shadow-xl flex flex-col gap-3 items-center justify-center hover:bg-orange-600 duration-150 transition-all ease-in-out'>
-            <div className='w-10 h-10 rounded-full bg-orange-600 group-hover:bg-card flex items-center justify-center'>
-              <IoFastFood className='text-card group-hover:text-textColor ' />
+            <div key={category.id} className={`group ${filter === category.urlParamName ? 'bg-orange-500' : 'bg-card'} w-24 min-w-[94px] h-28 cursor-pointer rounded-lg drop-shadow-xl flex flex-col gap-3 items-center justify-center hover:bg-orange-600 duration-150 transition-all ease-in-out`}>
+            <div className={`w-10 h-10 rounded-full ${filter === category.urlParamName ? 'bg-card': 'bg-orange-500'} group-hover:bg-white flex items-center justify-center shadow-lg`}>
+              <IoFastFood className={`${filter === category.urlParamName ? "text-textColor" : "text-white"} group-hover:text-textColor `} />
             </div>
-            <p className='text-sm text-textColor group-hover:text-white'>{category.name}</p>
+            <p className={`text-sm ${filter === category.urlParamName ? 'text-white' : 'text-textColor'} group-hover:text-white`}>{category.name}</p>
             </div>
           ))}
         </div>
