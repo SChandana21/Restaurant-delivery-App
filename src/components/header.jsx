@@ -16,7 +16,7 @@ const Header = () => {
   const firebaseAuth = getAuth(app);
   const provider = new GoogleAuthProvider();
 
-  const [{user, cartShow}, dispatch] = useStateValue();
+  const [{user, cartItems, cartShow}, dispatch] = useStateValue();
 
   const [isMenu, setisMenu] = useState(false)
 
@@ -73,9 +73,11 @@ const Header = () => {
 
       <div className='relative flex items-center justify-center' onClick={showCart}>
       <MdShoppingBasket className='text-textColor text-2xl cursor-pointer' />
-      <div className=' absolute -top-1 -right-1 w-4 h-4 rounded-full bg-cartNumBg flex items-center justify-center'>
-      <p className='text-xs text-white font-semibold'>2</p>
-      </div>
+      {cartItems && cartItems.length > 0 && (
+        <div className=' absolute -top-1 -right-1 w-4 h-4 rounded-full bg-cartNumBg flex items-center justify-center'>
+        <p className='text-xs text-white font-semibold'>{cartItems.length}</p>
+        </div>
+      )}
         </div>
         <div className='relative'>
         <motion.img whileTap={{scale : 0.6}} 
@@ -104,9 +106,11 @@ const Header = () => {
 
       <div className='relative flex items-center justify-center' onClick={showCart} >
       <MdShoppingBasket className='text-textColor text-2xl cursor-pointer' />
-      <div className=' absolute -top-1 -right-1 w-4 h-4 rounded-full bg-cartNumBg flex items-center justify-center'>
-      <p className='text-xs text-white font-semibold'>2</p>
-      </div>
+      {cartItems && cartItems.length > 0 && (
+        <div className=' absolute -top-1 -right-1 w-4 h-4 rounded-full bg-cartNumBg flex items-center justify-center'>
+        <p className='text-xs text-white font-semibold'>{cartItems.length}</p>
+        </div>
+      )}
         </div>
 
 
