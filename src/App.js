@@ -3,14 +3,18 @@ import  { CreateContainer, Header, MainContainer }  from "./components";
 import { AnimatePresence } from 'framer-motion';
 import { Route, Routes } from 'react-router-dom';
 import { useStateValue } from './context/StateProvider';
-import { getallFooditems } from './utils/firebaseFunctions';
+import { getallfoodItems } from './utils/firebaseFunctions';
+import { actionType } from './context/reducer';
 
 const App = () => {
-  const [{}, dispatch] = useStateValue();
+  const [{foodItems}, dispatch] = useStateValue();
 
   const fetchData = async () => {
-    await getallFooditems().then((data) => {
-      console.log(data);
+    await getallfoodItems().then((data) => {
+      dispatch({
+        type: actionType.SET_FOOD_ITEMS,
+        foodItems: data,
+      });
     });
   };
   
