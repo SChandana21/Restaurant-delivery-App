@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { MdShoppingBasket } from 'react-icons/md';
 import { motion} from 'framer-motion';
 import { useRef } from 'react';
@@ -10,15 +10,18 @@ const RowContainer = ({flag, data, scrollValue }) => {
   console.log(data);
   const rowContainer = useRef();
 
+  const [items, setItems] = useState([]);
+
 
   const [{cartItems}, dispatch] = useStateValue();
 
   const addtocart = (item) => {
+    setItems([...cartItems, item])
     dispatch({
       type: actionType.SET_CARTITEMS,
-      cartItems : [...cartItems, item]
+      cartItems : items,
     });
-    localStorage.setItem("cartItems",JSON.stringify(cartItems))
+    localStorage.setItem("cartItems",JSON.stringify(items))
   };
   useEffect(() => {
     rowContainer.current.scrollLeft += scrollValue;
