@@ -15,8 +15,8 @@ const RowContainer = ({flag, data, scrollValue }) => {
 
   const [{cartItems}, dispatch] = useStateValue();
 
-  const addtocart = (item) => {
-    setItems([...cartItems, item])
+  const addtocart = () => {
+    
     dispatch({
       type: actionType.SET_CARTITEMS,
       cartItems : items,
@@ -25,7 +25,11 @@ const RowContainer = ({flag, data, scrollValue }) => {
   };
   useEffect(() => {
     rowContainer.current.scrollLeft += scrollValue;
-  }, [scrollValue])
+  }, [scrollValue]);
+
+  useEffect(() => {
+    addtocart()
+  }, [items])
   return (
     <div
     ref={rowContainer}
@@ -38,7 +42,7 @@ const RowContainer = ({flag, data, scrollValue }) => {
          <div className='w-full min-w-[300px] md:min-w-[340px] md:w-340 h-auto bg-cardOverlay rounded-lg p-4  backdrop-blur-lg hover:drop-shadow-lg mb-2 '>
          <div className='w-full flex items-center justify-between '>
            <motion.img whileHover={{scale: 1.2 }}src= {item?.imageURL} alt='icecream' className='w-20 flex' />
-           <motion.div whileTap={{scale: 0.75}} className='w-8 h-8 rounded-full mb-16 bg-orange-400 flex items-center justify-center cursor-pointer   hover:shadow-md' onClick={() => addtocart(item)}>
+           <motion.div whileTap={{scale: 0.75}} className='w-8 h-8 rounded-full mb-16 bg-orange-400 flex items-center justify-center cursor-pointer   hover:shadow-md' onClick={() => setItems([...cartItems, item])}>
              < MdShoppingBasket className='text-white ' /> 
            </motion.div>
          </div>
