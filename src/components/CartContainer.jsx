@@ -6,6 +6,7 @@ import { BiMinus } from "react-icons/bi";
 import { BiPlus } from "react-icons/bi";
 import { useStateValue } from '../context/StateProvider';
 import { actionType } from '../context/reducer';
+import EmptyCart from '../img/emptyCart.svg'
 
 
 
@@ -62,8 +63,8 @@ const CartContainer = () => {
         </div>
 
       {/* cart total section */}
-      
-      <div className='w-full flex-1 bg-cartTotal rounded-t-[2rem] flex flex-col items-center justify-evenly px-8 py-2'>
+      {cartItems && cartItems.length > 0 ? (
+        <div className='w-full flex-1 bg-cartTotal rounded-t-[2rem] flex flex-col items-center justify-evenly px-8 py-2'>
         <div className='w-full flex items-center justify-between'>
           <p className='text-gray-400 text-lg'>Sub Total</p>
           <p className='text-gray-400 text-lg'>$8.5</p>
@@ -84,9 +85,21 @@ const CartContainer = () => {
         </motion.button>
         
       </div>
+      ): (
+        <div className='w-full h-full flex flex-col items-center justify-center gap-6'>
+  <img src={EmptyCart} className='w-300' alt='' />
+  <p className='text-xl text-textColor font-semibold'>
+    Add some items into the cart
+  </p>
+
+</div>
+        
+      )}
+      
       </div>
     </div>
   )
 } 
+
 
 export default CartContainer
