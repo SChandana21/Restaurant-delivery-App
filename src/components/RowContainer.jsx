@@ -7,7 +7,7 @@ const RowContainer = ({flag, data }) => {
   return (
     <div
      className={`w-full my-8 flex items-center gap-3   ${
-      flag ? 'overflow-x-scroll' : 'overflow-x-hidden'}
+      flag ? 'overflow-x-scroll scrollbar-none' : 'overflow-x-hidden'}
       `}
         >
       
