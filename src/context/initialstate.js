@@ -1,7 +1,7 @@
 import { fetchuser, fetchCart } from "../utils/fetchLocalStorage";
 
 const userInfo = fetchuser();
-const cartInfo = fetchCart()
+const cartInfo = fetchCart();
 
 
 
