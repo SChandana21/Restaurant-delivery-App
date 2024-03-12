@@ -9,6 +9,8 @@ import { Link, json } from 'react-router-dom';
 import { useStateValue } from '../context/StateProvider';
 import { actionType } from '../context/reducer';
 import { useState } from 'react';
+import HomeContainer from './HomeContainer';
+import Logo2 from './img/logo2.jpg';
 
 
 const Header = () => {
@@ -55,13 +57,13 @@ const Header = () => {
       {/* Desktop and tablet  */}
       <div className='hidden md:flex w-full h-full items-center justify-between'>
       <Link to={"/"} className='flex items-center gap-2'>
-          <img src={Logo} className='w-8 object-cover' alt='logo'></img>
-          <p className='text-HeadingColor text-xl font-bold'>City</p>
+          <img src={Logo2} className='w-8 object-cover' alt='logo'></img>
+          <p className='text-HeadingColor text-xl font-bold'>Tasty City</p>
       </Link>
 
       <div className='flex items-center gap-8'>
       <motion.ul initial={{opacity:0, x : 200}} animate={{opacity:1, x : 0}} exit={{opacity:0, x : 200}} className='flex items-center gap-8'>
-        <li className='text-base text-textColor hover:textheadingColor duration-100  transition-all ease-in-out
+        <li  className='text-base text-textColor hover:textheadingColor duration-100  transition-all ease-in-out
          cursor-pointer'>Home</li>
         <li className='text-base text-textColor hover:textheadingColor duration-100  transition-all ease-in-out
         cursor-pointer'>Menu</li>

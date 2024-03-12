@@ -29,7 +29,7 @@ const HomeContainer = () => {
       <div className='py-2  flex-1 flex items-center relative '>
         <img src={tray} className='h-420 ml-auto w-full lg:w-auto lg:h-650'alt='hero-bg' />
         <div className='w-full h-full absolute  top-0 left-0 flex  items-center justify-center px-32 py-4 '>
-        <div className='w-190 p-2 bg-cardOverlay backdrop-blur-md'>
+        <div className='w-190 p-2'>
           <img src='' />
   
         </div>
